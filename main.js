@@ -42,6 +42,9 @@ function showEvent(event){
     const price = eventCopy.querySelector(".eventPrice");
     price.textContent = event.event_price + ' kr';
 
+    const a = eventCopy.querySelector("a");
+    a.href = "event.html?id="+event.id;
+
     //4 append
     document.querySelector("#events").appendChild(eventCopy)
 }
