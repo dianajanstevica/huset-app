@@ -1,0 +1,14 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+        "main"
+        "footer";
+}
+
+
+
+.eventImage{
+    width: 100%;
+    height: auto;
+}
