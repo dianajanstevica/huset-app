@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-     <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events | Huset-KBH </title>
     <meta name="description" content="Huset-KBH is a cultural centre in the heart of Copenhagen, with wide variety of music, food, cinema and other events.">
@@ -21,12 +21,37 @@
 
 <body>
 
-   <h1>Event</h1>
+    <h1>Event</h1>
 
-   <nav>
+    <nav>
         <a href="index.html">All</a>
-   </nav>
-   <article><h1>Title</h1></article>
+    </nav>
+
+    <form action="search.html">
+        <input name="search" type="search">
+        <input type="submit" value="search">
+    </form>
+    <article>
+        <h1>Title</h1>
+    </article>
+    <main>
+
+        <section id="event"></section>
+        <template class="eventTemplate">
+            <article>
+                <header>
+                    <h2 class="eventTime">Event time here</h2>
+                    <h2 class="eventDate">Event date here</h2>
+                    <h3 class="eventLocation">event location here</h3>
+                    <img src="" alt="" class="eventImage">
+                </header>
+
+                <p class="longDescription">description here</p>
+                <h3 class="eventPrice">price here</h3>
+
+            </article>
+        </template>
+    </main>
     <script src="event.js"></script>
-</body>
-</html>
+
+</body></html>
