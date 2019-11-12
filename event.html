@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,41 +17,42 @@
     <meta name="theme-color" content="#f14545">
 
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/event.css">
 </head>
 
 <body>
 
     <h1>Event</h1>
-
+<section><h1></h1></section>
     <nav>
         <a href="index.html">All</a>
     </nav>
+
 
     <form action="search.html">
         <input name="search" type="search">
         <input type="submit" value="search">
     </form>
-    <article>
-        <h1>Title</h1>
-    </article>
+
     <main>
+<section id="events"></section>
+<template class="eventTemplate">
+    <article>
+        <header>
+            <a href="event.html?id="><h1 class="event_title">Title here</h1></a>
+            <h2 class="eventTime">Event time here</h2>
+            <h2 class="eventDate">Event date here</h2>
+            <h3 class="eventLocation">event location here</h3>
+            <img src="" alt="" class="eventImage">
+        </header>
 
-        <section id="event"></section>
-        <template class="eventTemplate">
-            <article>
-                <header>
-                    <h2 class="eventTime">Event time here</h2>
-                    <h2 class="eventDate">Event date here</h2>
-                    <h3 class="eventLocation">event location here</h3>
-                    <img src="" alt="" class="eventImage">
-                </header>
+        <p class="longDescription">description here</p>
+        <p class="shortDescription">description here</p>
 
-                <p class="longDescription">description here</p>
-                <h3 class="eventPrice">price here</h3>
-
-            </article>
-        </template>
+        <h3 class="eventPrice">price here</h3>
+    </article>
+</template>
     </main>
-    <script src="event.js"></script>
+    <script src="main.js"></script>
 
 </body></html>

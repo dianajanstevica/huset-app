@@ -1,18 +1,86 @@
-window.addEventListener("DOMContentLoaded", getData);
+window.addEventListener("DOMContentLoaded", init);
 
+function init() {
 
-function getData(){
-    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?per_page=100")
-    .then(res=>res.json())
-    .then(handleData)
+    const urlParams = new URLSearchParams(window.location.search);
+    const search = urlParams.get("search");
+    const id = urlParams.get("id");
+    const category = urlParams.get("category");
+
+    if (search) {
+        //        console.log("this is a search result")
+        getSearchData();
+    } else if (id) {
+        getSinglePage();
+    } else if (category) {
+getCategory(category);
+    } else {
+        getFrontpageData();
+    }
+    getNavigation();
 }
-function handleData(myData){
-//    console.log(myData)
+
+function getNavigation() {
+    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/categories?per_page=100")
+        .then(res => res.json())
+        .then(data => {
+            //        console.log(data)
+            data.forEach(addLink)
+        })
+}
+
+function addLink(oneItem) {
+    //        console.log(oneItem.name)
+    if (oneItem.parent === 15 && oneItem.count > 0) {
+        const link = document.createElement("a");
+        link.textContent = oneItem.name;
+        link.setAttribute("href", "category.html?category="+oneItem.id);
+        document.querySelector("nav").appendChild(link);
+    }
+}
+
+
+function getFrontpageData() {
+    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?per_page=100")
+        .then(res => res.json())
+        .then(handleData)
+}
+
+function getCategory(catid) {
+    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?_embed&categories="+catid)
+        .then(res => res.json())
+        .then(handleData)
+}
+
+
+function getSearchData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const search = urlParams.get("search");
+
+    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?_embed&search=" + search)
+        .then(res => res.json())
+        .then(handleData)
+}
+
+function getSinglePage() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    //    console.log(id)
+
+    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event/" + id)
+        .then(res => res.json())
+        .then(showEvent)
+}
+
+function handleData(myData) {
+    //    console.log(myData)
     //1 loop
+
     myData.forEach(showEvent)
 }
-function showEvent(event){
-//    console.log(event)
+
+function showEvent(event) {
+    //    console.log(event)
     //2 clone template
     const imgPath = event.image.guid;
 
@@ -21,8 +89,9 @@ function showEvent(event){
     //3 texcontent / innerHTML
     const title = eventCopy.querySelector("h1");
     title.textContent = event.title.rendered;
+    //    console.log(title)
 
-    const p = eventCopy.querySelector("p");
+    const p = eventCopy.querySelector(".shortDescription");
     p.textContent = event.short_description;
 
     const img = eventCopy.querySelector(".eventImage");
@@ -43,7 +112,12 @@ function showEvent(event){
     price.textContent = event.event_price + ' kr';
 
     const a = eventCopy.querySelector("a");
-    a.href = "event.html?id="+event.id;
+    a.href = "event.html?id=" + event.id;
+
+    const longDescription = eventCopy.querySelector(".longDescription");
+    longDescription.textContent = event.long_description;
+    console.log(longDescription);
+
 
     //4 append
     document.querySelector("#events").appendChild(eventCopy)
