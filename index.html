@@ -17,39 +17,66 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#f14545">
 
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="style/front.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/front.css">
+
+    <script src="https://kit.fontawesome.com/5911e287b1.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
-<main>
-<h1>Events</h1>
-<form action="search.html">
-    <input name="search" type="search">
-    <input type="submit" value="search">
-</form>
-<nav>
-        <a href="index.html">All</a>
-    </nav>
-<section id="events"></section>
-<template class="eventTemplate">
-    <article>
-        <header>
-            <a href="event.html?id="><h1 class="event_title">Title here</h1></a>
-            <h2 class="eventTime">Event time here</h2>
-            <h2 class="eventDate">Event date here</h2>
-            <h3 class="eventLocation">event location here</h3>
-            <img src="" alt="" class="eventImage">
-        </header>
+    <main>
+        <h1>Events</h1>
+        <form action="search.html">
+            <button class="search-icon" type="submit"><i class="fas fa-search"></i></button>
+            <input name="search" type="search" placeholder="Search">
 
-        <p class="shortDescription">description here</p>
-        <p class="longDescription"></p>
-        <h3 class="eventPrice">price here</h3>
-    </article>
-</template>
-</main>
+        </form>
+
+
+                <nav>
+                    <a href="index.html">All</a>
+                </nav>
+
+        <section id="events"></section>
+        <template class="eventTemplate">
+            <article>
+                <header>
+                    <a href="event.html?id=">
+                        <h1 class="event_title">Title here</h1>
+                    </a>
+                    <h2 class="eventTime">Event time here</h2>
+                    <h2 class="eventDate">Event date here</h2>
+                    <h3 class="eventLocation">event location here</h3>
+                    <img src="" alt="" class="eventImage">
+                </header>
+
+                <p class="shortDescription">description here</p>
+                <p class="longDescription"></p>
+                <h3 class="eventPrice">price here</h3>
+            </article>
+        </template>
+        <style>
+            img {
+                filter: grayscale(100%);
+                -webkit-filter: grayscale(100%);
+            }
+        </style>
+    </main>
+
+    <footer>
+        <nav id="navbar">
+            <div class="icon-bar">
+                <a class="active" href="#"><i class="far fa-calendar"></i></a>
+                <a href="#"><i class="fas fa-ticket-alt"></i></a>
+                <a href="#"><i class="far fa-user"></i></a>
+                <a href="#"><i class="fas fa-info"></i></a>
+                <a href="#"><i class="far fa-envelope"></i></a>
+            </div>
+        </nav>
+    </footer>
 
     <script src="main.js"></script>
-</body>
 
-</html>
+</body></html>

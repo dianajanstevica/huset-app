@@ -122,3 +122,4 @@ function showEvent(event) {
     //4 append
     document.querySelector("#events").appendChild(eventCopy)
 }
+

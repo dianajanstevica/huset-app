@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../fonts/Avenir Next.ttc');
+    src: local('Avenir Next'),
+        local('Avenir-Next');
+
+}
+
+
 body{
     display: grid;
     grid-template-columns: 1fr;
@@ -12,3 +21,84 @@ body{
     width: 100%;
     height: auto;
 }
+
+.icon-bar {
+    position: fixed;
+    bottom: 0;
+  width: 95%;
+  background-color: #FF634A;
+  overflow:scroll;
+    margin-bottom: 10px;
+
+
+}
+
+.icon-bar a {
+  float: left;
+  text-align: center;
+  width: 20%;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+
+}
+
+.icon-bar a:hover {
+  background-color: #CC280E;
+}
+
+.active {
+  background-color: #FF3112;
+}
+
+h1{
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 6vw;
+}
+
+h2{
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 5vw;
+}
+
+h3{
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 4vw;
+}
+
+p{
+    font-family: 'Avenir Next', sans-serif;
+}
+
+input[type=search] {
+  width: 17vw;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+     border: 1px solid #ccc;
+    border-radius: 20px;
+    color: #555;
+    font-size 14px;
+    margin: 0;
+    padding: 3px 12px;
+    height: 5vh;
+    margin-bottom: 1.5vh;
+
+
+}
+
+input[type=search]:focus {
+  width: 60%;
+
+    border-color: #FF3112;
+     outline: 0 none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+.search-icon{
+    font-size: 8vw;
+    margin-top: ;
+
+}
+
