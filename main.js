@@ -30,8 +30,7 @@ function getNavigation() {
 
 function addLink(oneItem) {
     //        console.log(oneItem.name)
-    const EVENTS_CATEGORY_ID = 15;
-    if (oneItem.parent === EVENTS_CATEGORY_ID && oneItem.count > 0) {
+    if (oneItem.parent === 15 && oneItem.count > 0) {
         const link = document.createElement("a");
         link.textContent = oneItem.name;
         link.setAttribute("href", "category.html?category="+oneItem.id);
@@ -46,7 +45,7 @@ function getFrontpageData() {
         .then(handleData)
 }
 
-function getCategory(cat_id) {
+function getCategory(catId) {
     fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?_embed&categories="+catId)
         .then(res => res.json())
         .then(handleData)
