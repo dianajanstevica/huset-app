@@ -1,7 +1,6 @@
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-
     const urlParams = new URLSearchParams(window.location.search);
     const search = urlParams.get("search");
     const id = urlParams.get("id");
@@ -31,11 +30,12 @@ function getNavigation() {
 
 function addLink(oneItem) {
     //        console.log(oneItem.name)
-    if (oneItem.parent === 15 && oneItem.count > 0) {
+    const EVENTS_CATEGORY_ID = 15;
+    if (oneItem.parent === EVENTS_CATEGORY_ID && oneItem.count > 0) {
         const link = document.createElement("a");
         link.textContent = oneItem.name;
         link.setAttribute("href", "category.html?category="+oneItem.id);
-        document.querySelector("nav").appendChild(link);
+        document.querySelector(".main_menu").appendChild(link);
     }
 }
 
@@ -46,12 +46,11 @@ function getFrontpageData() {
         .then(handleData)
 }
 
-function getCategory(catid) {
-    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?_embed&categories="+catid)
+function getCategory(cat_id) {
+    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?_embed&categories="+catId)
         .then(res => res.json())
         .then(handleData)
 }
-
 
 function getSearchData() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -122,4 +121,3 @@ function showEvent(event) {
     //4 append
     document.querySelector("#events").appendChild(eventCopy)
 }
-
