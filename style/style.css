@@ -310,3 +310,11 @@ input[type=email]:focus{
     display:inline-grid;
     padding: 3vw;
 }
+
+.longDescription main{
+    display: none;
+}
+
+.shortDescription event{
+    display: none;
+}
