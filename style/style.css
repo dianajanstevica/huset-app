@@ -311,10 +311,10 @@ input[type=email]:focus{
     padding: 3vw;
 }
 
-.longDescription main{
+.longDescription.front{
     display: none;
 }
 
-.shortDescription event{
+.shortDescription.sub{
     display: none;
 }
