@@ -33,6 +33,8 @@ body{
   background-color: #FF634A;
   overflow:scroll;
     margin-bottom: 10px;
+         box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+
 
 
 }
@@ -45,7 +47,6 @@ body{
   transition: all 0.3s ease;
   color: white;
   font-size: 36px;
-
 }
 
 .icon-bar a:hover {
@@ -65,6 +66,7 @@ h2{
     font-family: 'Avenir Next', sans-serif;
     font-size: 5vw;
     margin: 0;
+    padding-top: 2vh;
 }
 
 h3{
@@ -75,6 +77,13 @@ h3{
 }
 
 p{
+    font-family: 'Avenir Next', sans-serif;
+    text-align: left;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+li{
     font-family: 'Avenir Next', sans-serif;
     text-align: left;
     padding-left: 3vw;
@@ -143,9 +152,6 @@ nav{
     cursor: pointer;
     padding-left: 2vw;
     padding-right: 2vw;
-/*     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);*/
-
-
 }
 
 a{
@@ -166,6 +172,8 @@ a{
     position: sticky;
     top:0;
     z-index: 2;
+         box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+
 }
 
 .page_title{
@@ -174,7 +182,15 @@ a{
     padding-top: 1vh;
 }
 
+.page_title_2{
+    padding-left: 40vw;
+    text-align: center;
+    padding-top: 1vh;
+
+}
+
 .search_bar{
+    margin-top: 2vh;
     display: flex;
     flex-direction: row;
     padding: 1vw;
@@ -217,3 +233,80 @@ margin: 3vw 0;
     border: none;
 }
 
+iframe{
+    width: 80%;
+    height: auto;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+}
+input[type=text]{
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border: 1px solid #000;
+    border-radius: 20px;
+
+    color: #fff;
+    font-size 14px;
+
+    margin: 0;
+    padding: 3px 12px;
+    height: 5vh;
+    width: 25vw;
+    margin-top: 0.25vh;
+    margin: 3vw;
+
+}
+
+input[type=text]:focus{
+    width: 75%;
+
+    border-color: #FF3112;
+    outline: 0 none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+input[type=email]{
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border: 1px solid #000;
+    border-radius: 20px;
+
+    color: #fff;
+    font-size 14px;
+
+    margin: 0;
+    padding: 3px 12px;
+    height: 5vh;
+    width: 25vw;
+    margin-top: 0.25vh;
+    margin: 3vw;
+
+}
+
+input[type=email]:focus{
+    width: 75%;
+
+    border-color: #FF3112;
+    outline: 0 none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+.send{
+    padding: 3vw;
+    border-radius: 20px;
+    font-family: 'Avenir Next', sans-serif;
+    font-weight: bold;
+    font-size: 4vw;
+    background-color: #ff634a;
+     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+    margin: 2vw;
+    border: none;
+}
+
+.contact_form{
+    display:inline-grid;
+    padding: 3vw;
+}
