@@ -18,23 +18,30 @@
 
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/event.css">
+    <script src="https://kit.fontawesome.com/5911e287b1.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+<header class="topbar">
+      <a href="index.html"><img class="logo" src="../images/huset-logo.png" alt="Huset logo"></a>
+       <h1 class="page_title">Events</h1>
+   </header>
 
-    <h1>Event</h1>
-<section><h1></h1></section>
-    <nav>
-        <a href="index.html">All</a>
-    </nav>
-
-
-    <form action="search.html">
-        <input name="search" type="search">
-        <input type="submit" value="search">
-    </form>
 
     <main>
+
+        <form class="search_bar" action="search.html">
+            <button class="search-icon" type="submit"><i class="fas fa-search"></i></button>
+            <input name="search" type="search" placeholder="Search">
+
+        </form>
+
+
+        <nav class="main_menu">
+            <a href="index.html">All</a>
+        </nav>
+
 <section id="events"></section>
 <template class="eventTemplate">
     <article>
@@ -53,6 +60,20 @@
     </article>
 </template>
     </main>
+
+
+    <footer>
+        <nav id="navbar">
+            <div class="icon-bar">
+                <a class="active" href="index.html"><i class="far fa-calendar"></i></a>
+                <a href="#"><i class="fas fa-ticket-alt"></i></a>
+                <a href="#"><i class="far fa-user"></i></a>
+                <a href="#"><i class="fas fa-info"></i></a>
+                <a href="#"><i class="far fa-envelope"></i></a>
+            </div>
+        </nav>
+    </footer>
+
     <script src="main.js"></script>
 
 </body></html>
