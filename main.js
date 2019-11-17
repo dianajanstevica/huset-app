@@ -97,11 +97,20 @@ function showEvent(event) {
     img.setAttribute("src", imgPath)
     img.setAttribute("alt", "Event | " + event.title.rendered)
 
-    const time = eventCopy.querySelector(".eventTime");
-    time.textContent = event.event_time;
+    const eventDate = new Date(event.event_date + "T" + event.event_time);
 
+    const hours = eventDate.getHours() < 10 ? "0" + eventDate.getHours() : "" + eventDate.getHours();
+    const minutes = eventDate.getMinutes() < 10 ? "0" + eventDate.getMinutes() : "" + eventDate.getMinutes();
+    const time = eventCopy.querySelector(".eventTime");
+    time.textContent = `${hours}:${minutes}`;
+
+    const months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+
+    const year = "" + eventDate.getFullYear();
+    const month = months[eventDate.getMonth()];
+    const day = "" + eventDate.getDate();
     const date = eventCopy.querySelector(".eventDate");
-    date.textContent = event.event_date;
+    date.textContent = `${day}. ${month}  ${year}`;
 
     const location = eventCopy.querySelector(".eventLocation");
     location.textContent = event.location;
