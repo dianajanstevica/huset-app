@@ -12,7 +12,7 @@ function init() {
     } else if (id) {
         getSinglePage();
     } else if (category) {
-getCategory(category);
+        getCategory(category);
     } else {
         getFrontpageData();
     }
@@ -33,7 +33,7 @@ function addLink(oneItem) {
     if (oneItem.parent === 15 && oneItem.count > 0) {
         const link = document.createElement("a");
         link.textContent = oneItem.name;
-        link.setAttribute("href", "category.html?category="+oneItem.id);
+        link.setAttribute("href", "category.html?category=" + oneItem.id);
         document.querySelector(".main_menu").appendChild(link);
     }
 }
@@ -46,7 +46,7 @@ function getFrontpageData() {
 }
 
 function getCategory(catId) {
-    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?_embed&categories="+catId)
+    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?_embed&categories=" + catId)
         .then(res => res.json())
         .then(handleData)
 }
@@ -113,6 +113,7 @@ function showEvent(event) {
     a.href = "event.html?id=" + event.id;
 
     const longDescription = eventCopy.querySelector(".longDescription");
+
     longDescription.textContent = event.long_description;
     console.log(longDescription);
 

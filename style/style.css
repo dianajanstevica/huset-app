@@ -193,7 +193,7 @@ margin: 3vw 0;
 
 }
 
-.read_more{
+.show_ticket{
     padding: 3vw;
     border-radius: 20px;
     font-family: 'Avenir Next', sans-serif;
@@ -201,4 +201,19 @@ margin: 3vw 0;
     font-size: 4vw;
     background-color: #ff634a;
      box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+    margin: 2vw;
+    border: none;
 }
+
+.more{
+    padding: 3vw;
+    border-radius: 20px;
+    font-family: 'Avenir Next', sans-serif;
+    font-weight: bold;
+    font-size: 4vw;
+    background-color: #ff634a;
+     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+    margin: 2vw;
+    border: none;
+}
+
