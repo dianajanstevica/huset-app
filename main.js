@@ -100,7 +100,21 @@ function showEvent(event) {
     const eventDate = new Date(event.event_date + "T" + event.event_time);
 
     const hours = eventDate.getHours() < 10 ? "0" + eventDate.getHours() : "" + eventDate.getHours();
+//    if (hours < 10) {
+//        "0" + eventDate.getHours();
+//    } else {
+//        "" + eventDate.getHours();
+//    }
+//    console.log(hours);
+
     const minutes = eventDate.getMinutes() < 10 ? "0" + eventDate.getMinutes() : "" + eventDate.getMinutes();
+//    if (minutes < 10) {
+//        "1" + eventDate.getMinutes();
+//    } else {
+//        "" + eventDate.getMinutes();
+//    }
+//    console.log(minutes);
+
     const time = eventCopy.querySelector(".eventTime");
     time.textContent = `${hours}:${minutes}`;
 
@@ -124,7 +138,7 @@ function showEvent(event) {
     const longDescription = eventCopy.querySelector(".longDescription");
 
     longDescription.textContent = event.long_description;
-    console.log(longDescription);
+//    console.log(longDescription);
 
 
     //4 append
