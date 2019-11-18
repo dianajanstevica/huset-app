@@ -271,7 +271,7 @@ input[type=text]{
 }
 
 input[type=text]:focus{
-    width: 75%;
+    width: 95%;
 
     border-color: #FF3112;
     outline: 0 none;
@@ -296,14 +296,15 @@ input[type=email]{
     margin-top: 0.25vh;
     margin: 3vw;
 
+
 }
 
 input[type=email]:focus{
-    width: 75%;
-
+    width: 95%;
     border-color: #FF3112;
     outline: 0 none;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+
 }
 
 .message:focus{
