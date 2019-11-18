@@ -15,6 +15,10 @@ body{
         "footer";
     text-align: center;
     background-color: #FF634A;
+    overflow-x:hidden;
+    width:100%;
+    margin:0;
+    padding:0;
 }
 
 
@@ -30,11 +34,13 @@ body{
     grid-area: "footer";
     position: fixed;
     bottom: 0;
-  width: 95%;
+  width: 96%;
   background-color: #FF634A;
   overflow:scroll;
-    margin-bottom: 10px;
-         box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
+
+         box-shadow: 0px -10px 8px rgba(0, 0, 0, 0.35);
+    margin-bottom: 0.1vh;
+
 
 
 
@@ -47,7 +53,7 @@ body{
   padding: 12px 0;
   transition: all 0.3s ease;
   color: black;
-  font-size: 36px;
+  font-size: 9vw;
 }
 
 .icon-bar a:hover {
@@ -96,7 +102,7 @@ input[type=search] {
     transition: width 0.4s ease-in-out;
 
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    border: 1px solid #000;
+    border: 3px solid #000;
     border-radius: 20px;
 
 
@@ -135,11 +141,11 @@ input[type=search]:focus {
     color: #000000;
     font-family: 'Avenir Next', sans-serif;
     flex: 1;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     padding: 1.5vw;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
+
 }
 
 
@@ -175,7 +181,7 @@ a{
     position: sticky;
     top:0;
     z-index: 2;
-         box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
+         box-shadow: 0 10px 8px rgba(0, 0, 0, 0.35);
 
 }
 
@@ -203,12 +209,14 @@ a{
 article{
 
 margin: 3vw 0;
-    padding: 0.25vh;
+    padding: 2vh;
     padding-bottom: 5vh;
     background-color: azure;
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
     border-radius: 20px;
     margin-bottom: 6vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
 
 }
 
