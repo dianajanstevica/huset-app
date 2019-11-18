@@ -255,7 +255,7 @@ input[type=text]{
     transition: width 0.4s ease-in-out;
 
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    border: 1px solid #000;
+    border: 3px solid #000;
     border-radius: 20px;
 
 
@@ -283,7 +283,7 @@ input[type=email]{
     transition: width 0.4s ease-in-out;
 
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    border: 1px solid #000;
+    border: 3px solid #000;
     border-radius: 20px;
 
 
@@ -306,6 +306,13 @@ input[type=email]:focus{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 }
 
+.message:focus{
+    width: 75%;
+    height:75%;
+    margin-bottom: 15vh;
+    padding: 3vw;
+}
+
 .send{
     padding: 3vw;
     border-radius: 20px;
@@ -316,6 +323,7 @@ input[type=email]:focus{
      box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
     margin: 2vw;
     border: none;
+    margin-top: 5vh;
 }
 
 .contact_form{
