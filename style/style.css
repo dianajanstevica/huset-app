@@ -22,18 +22,19 @@ body{
 .eventImage{
     width: 80%;
     height: auto;
-    box-shadow: 10px  10px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px  10px 8px rgba(0, 0, 0, 0.35);
     border-radius: 20px
 }
 
 .icon-bar {
+    grid-area: "footer";
     position: fixed;
     bottom: 0;
   width: 95%;
   background-color: #FF634A;
   overflow:scroll;
     margin-bottom: 10px;
-         box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+         box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
 
 
 
@@ -45,7 +46,7 @@ body{
   width: 20%;
   padding: 12px 0;
   transition: all 0.3s ease;
-  color: white;
+  color: black;
   font-size: 36px;
 }
 
@@ -138,6 +139,7 @@ input[type=search]:focus {
     padding: 1.5vw;
     border-radius: 20px;
     text-align: center;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -166,13 +168,14 @@ a{
 }
 
 .topbar{
+    grid-area: "header";
   display: flex;
     flex-direction: row;
     background-color: #FF634A;
     position: sticky;
     top:0;
     z-index: 2;
-         box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+         box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
 
 }
 
@@ -203,7 +206,7 @@ margin: 3vw 0;
     padding: 0.25vh;
     padding-bottom: 5vh;
     background-color: azure;
-    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
     border-radius: 20px;
     margin-bottom: 6vh;
 
@@ -216,7 +219,7 @@ margin: 3vw 0;
     font-weight: bold;
     font-size: 4vw;
     background-color: #ff634a;
-     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
     margin: 2vw;
     border: none;
 }
@@ -228,15 +231,16 @@ margin: 3vw 0;
     font-weight: bold;
     font-size: 4vw;
     background-color: #ff634a;
-     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
     margin: 2vw;
     border: none;
 }
 
 iframe{
     width: 80%;
-    height: auto;
-    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
 }
 input[type=text]{
     -webkit-transition: width 0.4s ease-in-out;
@@ -301,7 +305,7 @@ input[type=email]:focus{
     font-weight: bold;
     font-size: 4vw;
     background-color: #ff634a;
-     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.35);
     margin: 2vw;
     border: none;
 }
